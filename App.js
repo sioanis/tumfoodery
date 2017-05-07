@@ -1,35 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import Login from 'react-native-simple-login'
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
 
-const onLogin = (email, password) => {
-  console.log(email, password) // user credentials
-}
+import createStore from './src/store';
 
-const onResetPassword = (email) => {
-  console.log(email)
-}
+import AppWithNavigationState from './src/AppWithNavigationState';
 
-export default class App extends React.Component {
-  render() {
-    let pic = {
-      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
-    return (
-      <View style={styles.container}>
-        <Login
-          onLogin={onLogin}
-          onResetPassword={onResetPassword}
-        />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-});
+export default () => (
+  <Provider store={createStore()}>
+    <AppWithNavigationState />
+  </Provider>
+);

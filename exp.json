@@ -1,7 +1,7 @@
 {
   "name": "tumfoodery",
   "icon": "images/icon.png",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "slug": "tumfoodery",
   "sdkVersion": "15.0.0",
   "ios": {
@@ -9,5 +9,6 @@
   },
   "android": {
     "package": "com.tumfoodery.android",
+    "versionCode": 2
   }
 }
