@@ -14,12 +14,14 @@ const styles = StyleSheet.create({
 
 export default class HomeScreenContainer extends Component {
   static navigationOptions = {
-    title: 'tumfoodery',
+    title: 'Create React Redux Native App',
   };
 
   render() {
     return (
       <View style={styles.container}>
+        <Text>Changes you make will automatically reload.</Text>
+        <Text>Shake your phone to open the developer menu.</Text>
         <CounterContainer />
       </View>
     );
